@@ -53,5 +53,103 @@ namespace Formulario_C_
                 }
             }
         }
+
+        private void btnDividir_Click(object sender, EventArgs e)
+        {
+
+            if (txtN1Divisao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 1 da divisão.");
+                txtN1Divisao.Focus();
+                txtN1Divisao.Clear();
+            }
+            else if (txtN2Divisao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 2 da divisão.");
+                txtN2Divisao.Focus();
+                txtN2Divisao.Clear();
+            }
+            else
+            {
+                double n1, n2, resultado;
+                try
+                {
+                    n1 = Convert.ToDouble(txtN1Divisao.Text);
+                    n2 = Convert.ToDouble(txtN2Divisao.Text);
+                    resultado = n1 / n2;
+                    txtRDividir.Text = Convert.ToString(resultado);
+                }
+                catch
+                {
+                    MessageBox.Show("digite os números corretamente.");
+                }
+            }
+        }
+
+        private void btnSubtrair_TextChanged(object sender, EventArgs e)
+        {
+
+           if (txtN1Subtracao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 1 da subtração.");
+                txtN1Subtracao.Focus();
+                txtN1Subtracao.Clear();
+            }
+            else if (txtN2Subtracao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 2 da subtração.");
+                txtN2Subtracao.Focus();
+                txtN2Subtracao.Clear();
+            }
+            else
+            {
+                double n1, n2, resultado;
+                try
+                {
+                    n1 = Convert.ToDouble(txtN1Subtracao.Text);
+                    n2 = Convert.ToDouble(txtN2Subtracao.Text);
+                    resultado = n1 - n2;
+                    txtRSubtracao.Text = Convert.ToString(resultado);
+                }
+                catch
+                {
+                    MessageBox.Show("digite os números corretamente.");
+                }
+            }
+
+        }
+
+        private void btnMultiplicar_Click(object sender, EventArgs e)
+        {
+
+            if (txtN1Multiplicacao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 1 da multiplicação.");
+                txtN1Multiplicacao.Focus();
+                txtN1Multiplicacao.Clear();
+            }
+            else if (txtN2Multiplicacao.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("preencher o número 2 da multiplicação.");
+                txtN2Multiplicacao.Focus();
+                txtN2Multiplicacao.Clear();
+            }
+            else
+            {
+                double n1, n2, resultado;
+                try
+                {
+                    n1 = Convert.ToDouble(txtN1Multiplicacao.Text);
+                    n2 = Convert.ToDouble(txtN2Multiplicacao.Text);
+                    resultado = n1 * n2;
+                    txtRMultiplicacao.Text = Convert.ToString(resultado);
+                }
+                catch
+                {
+                    MessageBox.Show("digite os números corretamente.");
+                }
+            }
+
+        }
     }
 }
